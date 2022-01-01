@@ -19,7 +19,7 @@ public class DbConnectSample01 {
             con = DriverManager.getConnection(
                     "jdbc:mysql://localhost/world?useSSL=false&allowPublicKeyRetrieval=true",
                     "root",
-                    "0421sota"
+                    System.getenv("PASSWORD")
             );
             // 3. DBとやりとりする窓口（Statementオブジェクト）の作成
             stmt = con.createStatement();
